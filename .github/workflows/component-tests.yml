@@ -65,6 +65,9 @@ jobs:
           git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
           git config --global user.email "hpillai@akamai.com"
           git config --global user.name "hpillai-akamai"
+          export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
+          allure generate allure-results -o allure-report
+          cp -r allure-report/history allure-results/history
           git add allure-results
           git commit -m "Add Allure reports"
           git push origin main
@@ -76,7 +79,7 @@ jobs:
         continue-on-error: true
         run: |
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
-          allure generate allure-results -o allure-report
+          # allure generate allure-results -o allure-report
           
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
