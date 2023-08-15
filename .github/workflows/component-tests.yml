@@ -14,6 +14,10 @@ jobs:
       fail-fast: true
     runs-on: ubuntu-latest
     steps:
+      - name: Check if triggering user is GitHub Actions bot
+        id: check_bot
+        run: echo "Is GitHub Actions bot? ${{ github.actor == 'github-actions[bot]' }}" >> /dev/null
+          
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
