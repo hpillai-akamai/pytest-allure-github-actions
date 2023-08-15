@@ -46,6 +46,8 @@ jobs:
           pytest -v --alluredir=./allure-results
           
       - name: Commit Allure Reports
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
