@@ -1,11 +1,11 @@
 {
-  "uid" : "3e708b99e18a026b",
+  "uid" : "6af7a856563a114a",
   "name" : "test_function_3",
   "fullName" : "test_cases#test_function_3",
   "historyId" : "3b26660cae1a76b3c30f4a25827be2fb",
   "time" : {
-    "start" : 1692120271391,
-    "stop" : 1692120271392,
+    "start" : 1692120303474,
+    "stop" : 1692120303475,
     "duration" : 1
   },
   "description" : " Test function three 3 ",
@@ -37,10 +37,10 @@
     "value" : "sanity"
   }, {
     "name" : "host",
-    "value" : "fv-az1030-220"
+    "value" : "fv-az561-124"
   }, {
     "name" : "thread",
-    "value" : "2047-MainThread"
+    "value" : "2062-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -61,7 +61,16 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ {
-      "uid" : "bca0c111bb82a194",
+      "uid" : "70bad30b08d48cc2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692120271391,
+        "stop" : 1692120271392,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "ce4f3c6053498c49",
       "status" : "failed",
       "statusDetails" : "AssertionError: assert 3 == 4",
       "time" : {
@@ -70,7 +79,7 @@
         "duration" : 1
       }
     }, {
-      "uid" : "722bea77273b4e59",
+      "uid" : "8f02ec87789bb181",
       "status" : "failed",
       "statusDetails" : "AssertionError: assert 3 == 4",
       "time" : {
@@ -86,6 +95,6 @@
     } ],
     "tags" : [ "sanity", "basic_sanity", "master" ]
   },
-  "source" : "3e708b99e18a026b.json",
+  "source" : "6af7a856563a114a.json",
   "parameterValues" : [ ]
 }
