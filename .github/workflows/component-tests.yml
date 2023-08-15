@@ -50,6 +50,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
+          eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_ed25519
           git config --global user.email "hpillai@akamai.com"
           git config --global user.name "hpillai-akamai"
