@@ -30,5 +30,5 @@ def test_function_2():
 @pytest.mark.basic_sanity
 def test_function_3():
     """ Test function three 3 """
-    allure.dynamic.suite("SUITE_2")
+    allure.dynamic.suite("SUITE_1")
     assert 3==4
