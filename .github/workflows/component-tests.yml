@@ -47,8 +47,12 @@ jobs:
           
       - name: Commit Allure Reports
         run: |
-          git config --local user.email "hpillai@akamai.com"
-          git config --local user.name "hpillai-akamai"
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-add ~/.ssh/id_ed25519
+          git config --global user.email "hpillai@akamai.com"
+          git config --global user.name "hpillai-akamai"
           git add allure-results
           git commit -m "Add Allure reports"
           git push origin main
