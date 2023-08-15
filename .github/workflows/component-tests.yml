@@ -50,7 +50,7 @@ jobs:
           pytest -v -p no:warnings --alluredir=./allure-results
           
       - name: Commit Allure Reports
-        if: steps.check_bot.outputs.check_bot != 'true'
+        if: ${{ github.actor != 'github-actions[bot]' }}
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
