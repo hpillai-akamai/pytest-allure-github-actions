@@ -1,31 +1,31 @@
 {
-  "uid" : "b60ca124dde6e34f",
+  "uid" : "7d0859b654ab3641",
   "name" : "test_function_3",
   "fullName" : "test_cases#test_function_3",
   "historyId" : "3b26660cae1a76b3c30f4a25827be2fb",
   "time" : {
-    "start" : 1692120250727,
-    "stop" : 1692120250728,
+    "start" : 1692120473153,
+    "stop" : 1692120473154,
     "duration" : 1
   },
   "description" : " Test function three 3 ",
   "descriptionHtml" : "<p>Test function three 3</p>\n",
   "status" : "failed",
   "statusMessage" : "AssertionError: assert 3 == 4",
-  "statusTrace" : "@allure.epic(\"EPIC_1\")\n    @allure.parent_suite('Parent Suite 1')\n    @pytest.mark.sanity\n    @pytest.mark.master\n    @pytest.mark.basic_sanity\n    def test_function_3():\n        \"\"\" Test function three 3 \"\"\"\n        allure.dynamic.suite(\"SUITE_2\")\n>       assert 3==4\nE       assert 3 == 4\n\ntest_cases.py:34: AssertionError",
+  "statusTrace" : "@allure.epic(\"EPIC_1\")\n    @allure.parent_suite('Parent Suite 1')\n    @pytest.mark.sanity\n    @pytest.mark.master\n    @pytest.mark.basic_sanity\n    def test_function_3():\n        \"\"\" Test function three 3 \"\"\"\n        allure.dynamic.suite(\"SUITE_1\")\n>       assert 3==4\nE       assert 3 == 4\n\ntest_cases.py:34: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "suite",
-    "value" : "SUITE_2"
-  }, {
-    "name" : "parentSuite",
-    "value" : "Parent Suite 1"
+    "value" : "SUITE_1"
   }, {
     "name" : "epic",
     "value" : "EPIC_1"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Parent Suite 1"
   }, {
     "name" : "tag",
     "value" : "basic_sanity"
@@ -37,10 +37,10 @@
     "value" : "sanity"
   }, {
     "name" : "host",
-    "value" : "fv-az454-43"
+    "value" : "fv-az397-808"
   }, {
     "name" : "thread",
-    "value" : "2068-MainThread"
+    "value" : "2057-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -62,6 +62,6 @@
     "categories" : [ ],
     "tags" : [ "sanity", "basic_sanity", "master" ]
   },
-  "source" : "b60ca124dde6e34f.json",
+  "source" : "7d0859b654ab3641.json",
   "parameterValues" : [ ]
 }
