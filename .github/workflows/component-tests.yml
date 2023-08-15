@@ -45,8 +45,18 @@ jobs:
           allure --version
           pytest -v --alluredir=./allure-results
           
-          
-      - name: Install Allure command-line tool
+      - name: Commit Allure Reports
+        run: |
+          git config --local user.email "hpillai@akamai.com"
+          git config --local user.name "hpillai-akamai"
+          git add allure-results
+          git commit -m "Add Allure reports"
+          git push origin main
+      
+      - name: Pull Repository Changes
+        run: git pull origin main
+
+      - name: Generate Historical Allure Reports
         continue-on-error: true
         run: |
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
