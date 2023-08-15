@@ -43,7 +43,7 @@ jobs:
           unzip allure-2.15.0.zip
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           allure --version
-          pytest -v --alluredir=./allure-results
+          pytest -v -p no:warnings --alluredir=./allure-results
           
       - name: Commit Allure Reports
         env:
@@ -54,6 +54,8 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_ed25519
+          git remote -v
+          git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
           git config --global user.email "hpillai@akamai.com"
           git config --global user.name "hpillai-akamai"
           git add allure-results
