@@ -1,12 +1,12 @@
 {
-  "uid" : "421b5f4ac7e77d04",
+  "uid" : "3e708b99e18a026b",
   "name" : "test_function_3",
-  "fullName" : "work.untitled folder.pytest-allure-github-actions.test_cases#test_function_3",
-  "historyId" : "f4a1eb6e921f4e83336aaae616550a6a",
+  "fullName" : "test_cases#test_function_3",
+  "historyId" : "3b26660cae1a76b3c30f4a25827be2fb",
   "time" : {
-    "start" : 1691005519421,
-    "stop" : 1691005519421,
-    "duration" : 0
+    "start" : 1692120271391,
+    "stop" : 1692120271392,
+    "duration" : 1
   },
   "description" : " Test function three 3 ",
   "descriptionHtml" : "<p>Test function three 3</p>\n",
@@ -21,11 +21,11 @@
     "name" : "suite",
     "value" : "SUITE_2"
   }, {
-    "name" : "parentSuite",
-    "value" : "Parent Suite 1"
-  }, {
     "name" : "epic",
     "value" : "EPIC_1"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Parent Suite 1"
   }, {
     "name" : "tag",
     "value" : "basic_sanity"
@@ -37,10 +37,10 @@
     "value" : "sanity"
   }, {
     "name" : "host",
-    "value" : "blr-mpz39"
+    "value" : "fv-az1030-220"
   }, {
     "name" : "thread",
-    "value" : "11607-MainThread"
+    "value" : "2047-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -49,7 +49,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "work.untitled folder.pytest-allure-github-actions.test_cases"
+    "value" : "test_cases"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -60,7 +60,25 @@
   "retry" : false,
   "extra" : {
     "severity" : "normal",
-    "retries" : [ ],
+    "retries" : [ {
+      "uid" : "bca0c111bb82a194",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692120250727,
+        "stop" : 1692120250728,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "722bea77273b4e59",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692120221651,
+        "stop" : 1692120221651,
+        "duration" : 0
+      }
+    } ],
     "categories" : [ {
       "name" : "Product defects",
       "matchedStatuses" : [ ],
@@ -68,6 +86,6 @@
     } ],
     "tags" : [ "sanity", "basic_sanity", "master" ]
   },
-  "source" : "421b5f4ac7e77d04.json",
+  "source" : "3e708b99e18a026b.json",
   "parameterValues" : [ ]
 }
