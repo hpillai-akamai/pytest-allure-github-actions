@@ -1,11 +1,11 @@
 {
-  "uid" : "147fe5e404b7e6d4",
+  "uid" : "f8fb8cb944abf52e",
   "name" : "test_function_3",
   "fullName" : "test_cases#test_function_3",
   "historyId" : "3b26660cae1a76b3c30f4a25827be2fb",
   "time" : {
-    "start" : 1692123061546,
-    "stop" : 1692123061547,
+    "start" : 1692431943036,
+    "stop" : 1692431943037,
     "duration" : 1
   },
   "description" : " Test function three 3 ",
@@ -21,11 +21,11 @@
     "name" : "suite",
     "value" : "SUITE_1"
   }, {
-    "name" : "epic",
-    "value" : "EPIC_1"
-  }, {
     "name" : "parentSuite",
     "value" : "Parent Suite 1"
+  }, {
+    "name" : "epic",
+    "value" : "EPIC_1"
   }, {
     "name" : "tag",
     "value" : "basic_sanity"
@@ -37,10 +37,10 @@
     "value" : "sanity"
   }, {
     "name" : "host",
-    "value" : "fv-az167-721"
+    "value" : "fv-az1030-979"
   }, {
     "name" : "thread",
-    "value" : "2057-MainThread"
+    "value" : "2106-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -60,7 +60,16 @@
   "retry" : false,
   "extra" : {
     "severity" : "normal",
-    "retries" : [ ],
+    "retries" : [ {
+      "uid" : "45bd83e71b91e502",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692123061546,
+        "stop" : 1692123061547,
+        "duration" : 1
+      }
+    } ],
     "categories" : [ {
       "name" : "Product defects",
       "matchedStatuses" : [ ],
@@ -68,6 +77,6 @@
     } ],
     "tags" : [ "sanity", "basic_sanity", "master" ]
   },
-  "source" : "147fe5e404b7e6d4.json",
+  "source" : "f8fb8cb944abf52e.json",
   "parameterValues" : [ ]
 }
