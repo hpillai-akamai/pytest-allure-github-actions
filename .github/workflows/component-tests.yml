@@ -1,4 +1,4 @@
-name: Run component tests and show reports
+name: Run component tests and show reports 
 
 on:
   push:
@@ -79,8 +79,8 @@ jobs:
           cp -r allure-report-cases/history allure-results/allure-results-cases/history/
           allure generate allure-results/allure-results-calculator -o allure-report-calculator --clean
           cp -r allure-report-calculator/history allure-results/allure-results-calculator/history/
-          cp -r allure-report-cases docs/
-          cp -r allure-report-calculator docs/
+          cp -r allure-report-cases/. docs/allure-report-cases/.
+          cp -r allure-report-calculator/. docs/allure-report-calculator/.
           git add allure-report-cases
           git add allure-report-calculator
           git add allure-results
