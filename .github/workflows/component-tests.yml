@@ -1,11 +1,11 @@
-name: Run component tests and show reports 
+name: Run component tests and show reports
 
 on:
   push:
     branches:
       - main
     paths-ignore:
-      - 'allure-results/**' 
+      - 'allure-results/**'
   pull_request:
     branches:
       - main
@@ -19,7 +19,7 @@ jobs:
       - name: Check if triggering user is GitHub Actions bot
         id: check_bot
         run: echo "Is GitHub Actions bot? ${{ github.actor == 'github-actions[bot]' }}" >> /dev/null
-          
+
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
@@ -41,7 +41,7 @@ jobs:
           echo "$SECRET_VAR"
           echo "The git secrets data is: ${{ secrets.SECRET_1 }}"
 
-      - name: Install Allure command-line tool
+      - name: Install Allure command-line tool and Run test_cases.py
         continue-on-error: true
         run: |
           sudo apt install allure
@@ -49,8 +49,15 @@ jobs:
           unzip allure-2.15.0.zip
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           allure --version
-          pytest -v -p no:warnings --alluredir=./allure-results
-          
+          pytest test_cases.py -v -p no:warnings --alluredir=./allure-results/allure-results-cases
+
+      - name: Run test_calculator.py
+        continue-on-error: true
+        run: |
+          export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
+          allure --version
+          pytest test_calculator.py -v -p no:warnings --alluredir=./allure-results/allure-results-calculator
+
       - name: Commit Allure Reports
         if: ${{ github.actor != 'github-actions[bot]' }}
         env:
@@ -66,12 +73,14 @@ jobs:
           git config --global user.email "hpillai@akamai.com"
           git config --global user.name "hpillai-akamai"
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
-          allure generate allure-results -o allure-report
-          cp -r allure-report/history allure-results/history
+          allure generate allure-results/allure-results-cases -o allure-report-cases
+          cp -r allure-report-cases/history allure-results/allure-results-cases/history
+          allure generate allure-results/allure-results-calculator -o allure-report-calculator
+          cp -r allure-report-calculator/history allure-results/allure-results-calculator/history
           git add allure-results
           git commit -m "Add Allure reports"
           git push origin main
-      
+
       - name: Pull Repository Changes
         run: git pull origin main
 
@@ -80,12 +89,20 @@ jobs:
         run: |
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           # allure generate allure-results -o allure-report
-          
-      - name: Publish to GitHub Pages
+
+      - name: Publish to GitHub Pages test_cases
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.MY_GITHUB_TOKEN }}
-          publish_dir: ./allure-report
+          publish_dir: ./allure-report-cases
+          cname: hpillai-akamai.github.io
+
+      - name: Publish to GitHub Pages test_calculator
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+          publish_dir: ./allure-report-calculator
+          cname: hpillai-akamai.github.io
 
       - name: Show allure report
         continue-on-error: true
