@@ -74,9 +74,9 @@ jobs:
           git config --global user.name "hpillai-akamai"
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           allure generate allure-results/allure-results-cases -o allure-report-cases
-          cp -r allure-report-cases/history allure-results/allure-results-cases/history
+          cp -r allure-report-cases/history allure-results/allure-results-cases/history/
           allure generate allure-results/allure-results-calculator -o allure-report-calculator
-          cp -r allure-report-calculator/history allure-results/allure-results-calculator/history
+          cp -r allure-report-calculator/history allure-results/allure-results-calculator/history/
           git add allure-results
           git commit -m "Add Allure reports"
           git push origin main
