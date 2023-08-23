@@ -1,75 +1,101 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "children" : [ {
-    "name" : "github-actions.pytest-allure-github-actions",
+    "name" : "Parent Suite 1",
     "children" : [ {
-      "name" : "test_calculator",
+      "name" : "SUITE_1",
       "children" : [ {
-        "name" : "Addition Test",
-        "uid" : "84feba984820868a",
-        "parentUid" : "8853b84b5061971dda351fb5f88107f1",
+        "name" : "test_function_1",
+        "uid" : "2a58a11efb205571",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
         "status" : "passed",
         "time" : {
-          "start" : 1692773417039,
-          "stop" : 1692773417040,
+          "start" : 1692122264567,
+          "stop" : 1692122264568,
           "duration" : 1
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Subtraction Test",
-        "uid" : "4a92d653ae382839",
-        "parentUid" : "8853b84b5061971dda351fb5f88107f1",
+        "name" : "test_function_2",
+        "uid" : "396fb8ec67c4c43a",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
         "status" : "passed",
         "time" : {
-          "start" : 1692773417042,
-          "stop" : 1692773417042,
+          "start" : 1692122264569,
+          "stop" : 1692122264570,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_function_3",
+        "uid" : "7e57c1433d4e566d",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1692122264572,
+          "stop" : 1692122264572,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Multiplication Test",
-        "uid" : "578c30dd8a964db",
-        "parentUid" : "8853b84b5061971dda351fb5f88107f1",
+        "name" : "test_function_1",
+        "uid" : "2d3da5c0f7dd662a",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
         "status" : "passed",
         "time" : {
-          "start" : 1692773417044,
-          "stop" : 1692773417044,
+          "start" : 1692805032572,
+          "stop" : 1692805032572,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Division Test",
-        "uid" : "48d49af183ea8456",
-        "parentUid" : "8853b84b5061971dda351fb5f88107f1",
+        "name" : "test_function_2",
+        "uid" : "cc4d8c9a018f45df",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
         "status" : "passed",
         "time" : {
-          "start" : 1692773417046,
-          "stop" : 1692773417046,
+          "start" : 1692805032581,
+          "stop" : 1692805032581,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_function_3",
+        "uid" : "c5970ee8817dfc79",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1692805032583,
+          "stop" : 1692805032583,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8853b84b5061971dda351fb5f88107f1"
+      "uid" : "493a142f4de8fde856897fdc388ff0a0"
     } ],
-    "uid" : "5327b545e3c8166c6b2f8e9dcdf9c6e9"
+    "uid" : "65d0eef147c98286e9a7c7d5b6ade761"
   }, {
     "name" : "test_calculator",
     "children" : [ {
       "name" : "Addition Test",
-      "uid" : "19582e8d0f33a2c9",
+      "uid" : "87165260835969f8",
       "parentUid" : "730172bfce097dc2402d3087336a1622",
       "status" : "passed",
       "time" : {
-        "start" : 1692804993115,
-        "stop" : 1692804993115,
+        "start" : 1692431943019,
+        "stop" : 1692431943019,
         "duration" : 0
       },
       "flaky" : false,
@@ -77,25 +103,25 @@
       "parameters" : [ ]
     }, {
       "name" : "Subtraction Test",
-      "uid" : "36422900a84514f8",
+      "uid" : "fcf2836de0c48bb1",
       "parentUid" : "730172bfce097dc2402d3087336a1622",
       "status" : "passed",
       "time" : {
-        "start" : 1692804993117,
-        "stop" : 1692804993118,
-        "duration" : 1
+        "start" : 1692431943023,
+        "stop" : 1692431943023,
+        "duration" : 0
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Multiplication Test",
-      "uid" : "b219bd6780c67dad",
+      "uid" : "48b5cf61f7601279",
       "parentUid" : "730172bfce097dc2402d3087336a1622",
       "status" : "passed",
       "time" : {
-        "start" : 1692804993120,
-        "stop" : 1692804993120,
+        "start" : 1692431943026,
+        "stop" : 1692431943026,
         "duration" : 0
       },
       "flaky" : false,
@@ -103,12 +129,12 @@
       "parameters" : [ ]
     }, {
       "name" : "Division Test",
-      "uid" : "bf6f329892b234ce",
+      "uid" : "2e8f3ec035a03acf",
       "parentUid" : "730172bfce097dc2402d3087336a1622",
       "status" : "passed",
       "time" : {
-        "start" : 1692804993122,
-        "stop" : 1692804993122,
+        "start" : 1692431943029,
+        "stop" : 1692431943029,
         "duration" : 0
       },
       "flaky" : false,
