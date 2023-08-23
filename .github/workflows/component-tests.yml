@@ -77,6 +77,8 @@ jobs:
           cp -r allure-report-cases/history allure-results/allure-results-cases/history/
           allure generate allure-results/allure-results-calculator -o allure-report-calculator
           cp -r allure-report-calculator/history allure-results/allure-results-calculator/history/
+          git add allure-report-cases
+          git add allure-report-calculator
           git add allure-results
           git commit -m "Add Allure reports"
           git push origin main
