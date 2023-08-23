@@ -80,7 +80,6 @@ jobs:
           cp -r allure-report-1/. docs/allure-report-cases/.
           allure generate allure-results/allure-results-calculator -o allure-report-2
           cp -r allure-report-2/history/. allure-results/allure-results-calculator/history/.
-          cp -r allure-report-2/. docs/allure-report-cases/.
           cp -r allure-report-calculator/. docs/allure-report-calculator/.
           # git add allure-report-cases
           # git add allure-report-calculator
