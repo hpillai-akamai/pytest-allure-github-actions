@@ -1,12 +1,12 @@
 {
-  "uid" : "8ddc234984125bd3",
-  "name" : "Subtraction Test",
-  "fullName" : "test_calculator#test_subtraction",
-  "historyId" : "51e12d7eeaeff3c020b353a4ba8ca948",
+  "uid" : "e0776db7a27b5aa1",
+  "name" : "Addition Test",
+  "fullName" : "github-actions.pytest-allure-github-actions.test_calculator#test_addition",
+  "historyId" : "6c514c06d992a31149f7ede90134e6c2",
   "time" : {
-    "start" : 1692431943023,
-    "stop" : 1692431943023,
-    "duration" : 0
+    "start" : 1692773417039,
+    "stop" : 1692773417040,
+    "duration" : 1
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "calculator",
     "time" : {
-      "start" : 1692431943022,
-      "stop" : 1692431943023,
-      "duration" : 1
+      "start" : 1692773417039,
+      "stop" : 1692773417039,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -30,10 +30,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Performing subtraction",
+      "name" : "Performing addition",
       "time" : {
-        "start" : 1692431943023,
-        "stop" : 1692431943023,
+        "start" : 1692773417039,
+        "stop" : 1692773417039,
         "duration" : 0
       },
       "status" : "passed",
@@ -54,14 +54,17 @@
   },
   "afterStages" : [ ],
   "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "github-actions.pytest-allure-github-actions"
+  }, {
     "name" : "suite",
     "value" : "test_calculator"
   }, {
     "name" : "host",
-    "value" : "fv-az1030-979"
+    "value" : "blr-mpz39"
   }, {
     "name" : "thread",
-    "value" : "2106-MainThread"
+    "value" : "31956-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -70,7 +73,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test_calculator"
+    "value" : "github-actions.pytest-allure-github-actions.test_calculator"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -83,8 +86,27 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "2bc6fb1e2c4c6111",
+        "status" : "passed",
+        "time" : {
+          "start" : 1692773417039,
+          "stop" : 1692773417040,
+          "duration" : 1
+        }
+      } ]
+    },
     "tags" : [ ]
   },
-  "source" : "8ddc234984125bd3.json",
+  "source" : "e0776db7a27b5aa1.json",
   "parameterValues" : [ ]
 }
