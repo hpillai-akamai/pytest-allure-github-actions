@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger wf-cases
-        uses: actions/workflow-dispatch@v2
+        uses: 'actions/actions-runner-controller@v3'
         with:
+          runner_group: workflow-trigger
           workflow_file: wf-cases.yaml
 
       - name: Trigger wf-calculator
-        uses: actions/workflow-dispatch@v2
+        uses: 'actions/actions-runner-controller@v3'
         with:
+          runner_group: workflow-trigger
           workflow_file: wf-calculator.yaml
