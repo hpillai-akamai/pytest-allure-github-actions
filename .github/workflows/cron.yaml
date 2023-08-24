@@ -1,21 +1,23 @@
 name: Trigger Workflows on Schedule
+
 on:
   schedule:
     - cron: '*/6 * * * *'
-      jobs:
-        trigger-wf-cases:
-          runs-on: ubuntu-latest
-          steps:
-            - name: Trigger wf-cases.yml
-              uses: actions/github-actions-runner@v3
-              with:
-                workflow_file: wf-cases.yml
     - cron: '*/10 * * * *'
-      jobs:
-        trigger-wf-calculator:
-          runs-on: ubuntu-latest
-          steps:
-            - name: Trigger wf-calculator.yml
-              uses: actions/github-actions-runner@v3
-              with:
-                workflow_file: wf-calculator.yml
+
+jobs:
+  trigger-wf-cases:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger wf-cases
+        uses: actions/github-actions-runner@v3
+        with:
+          workflow_file: wf-cases.yml
+
+  trigger-wf-calculator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger wf-calculator
+        uses: actions/github-actions-runner@v3
+        with:
+          workflow_file: wf-calculator.yml
