@@ -1,0 +1,130 @@
+{
+  "uid" : "7ab4838280172675",
+  "name" : "test_failure",
+  "fullName" : "test_calculator#test_failure",
+  "historyId" : "2b9180ad6a4e73145c7220e56ef622f9",
+  "time" : {
+    "start" : 1692914351017,
+    "stop" : 1692914351017,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 3 == 4",
+  "statusTrace" : "@allure.epic(\"EPIC_1\")\n    @allure.parent_suite('Parent Suite 1')\n    @pytest.mark.basic_sanity\n    def test_failure():\n        allure.dynamic.suite(\"SUITE_1\")\n        print(\"TC failure here\")\n>       assert 3 == 4\nE       assert 3 == 4\n\ntest_calculator.py:47: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 3 == 4",
+    "statusTrace" : "@allure.epic(\"EPIC_1\")\n    @allure.parent_suite('Parent Suite 1')\n    @pytest.mark.basic_sanity\n    def test_failure():\n        allure.dynamic.suite(\"SUITE_1\")\n        print(\"TC failure here\")\n>       assert 3 == 4\nE       assert 3 == 4\n\ntest_calculator.py:47: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "e3e047348dbd58a8",
+      "name" : "stdout",
+      "source" : "e3e047348dbd58a8.txt",
+      "type" : "text/plain",
+      "size" : 16
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "SUITE_1"
+  }, {
+    "name" : "epic",
+    "value" : "EPIC_1"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Parent Suite 1"
+  }, {
+    "name" : "tag",
+    "value" : "basic_sanity"
+  }, {
+    "name" : "host",
+    "value" : "fv-az809-917"
+  }, {
+    "name" : "thread",
+    "value" : "2061-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_calculator"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "683f1bb750047ffd",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692913653644,
+        "stop" : 1692913653644,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "a9ccdd7f5ba4b9d3",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692912646680,
+        "stop" : 1692912646681,
+        "duration" : 1
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "98fc0d41153d24bd",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692913653644,
+          "stop" : 1692913653644,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "10e6a29e9fb4acff",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692912646680,
+          "stop" : 1692912646681,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ "basic_sanity" ]
+  },
+  "source" : "7ab4838280172675.json",
+  "parameterValues" : [ ]
+}
