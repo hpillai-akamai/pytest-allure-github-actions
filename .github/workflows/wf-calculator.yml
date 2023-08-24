@@ -81,13 +81,6 @@ jobs:
           git commit -m "Add Allure reports"
           git push origin main
 
-      - name: Pull Repository Changes
-        run: git pull origin main
-
-
-
-
-
       - name: Publish to GitHub Pages test_calculator
         if: github.event_name == 'schedule'  
         uses: peaceiris/actions-gh-pages@v3
