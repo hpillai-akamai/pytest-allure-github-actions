@@ -46,3 +46,8 @@ def test_division(calculator):
     with allure.step("Performing division"):
         result = calculator.divide(8, 2)
     assert result == 4
+
+@allure.title("Test Failure")
+def test_division(calculator):
+    print("TC failure here")
+    assert 3 == 4
