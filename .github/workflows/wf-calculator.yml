@@ -1,6 +1,9 @@
 name: Run component tests for calculator and show reports
 
-# on:
+on:
+  schedule:
+    - cron: '*/10 * * * *'  
+    
 #   push:
 #     branches:
 #       - main
