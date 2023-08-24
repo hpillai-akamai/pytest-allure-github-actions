@@ -1,6 +1,8 @@
 name: Run component tests for cases and show reports
 
-# on:
+on:
+  schedule:
+    - cron: '*/6 * * * *'  
 #   push:
 #     branches:
 #       - main
