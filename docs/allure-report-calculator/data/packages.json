@@ -1,117 +1,69 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
   "children" : [ {
     "name" : "github-actions.pytest-allure-github-actions.test_calculator",
     "children" : [ {
-      "name" : "Addition Test",
-      "uid" : "58d69339a61b2077",
+      "name" : "test_addition",
+      "uid" : "186aea47dad25b9c",
       "parentUid" : "2db20320d58fe0098644c110544c14bb",
       "status" : "passed",
       "time" : {
-        "start" : 1692773417039,
-        "stop" : 1692773417040,
+        "start" : 1692912283790,
+        "stop" : 1692912283791,
         "duration" : 1
       },
       "flaky" : false,
-      "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "Subtraction Test",
-      "uid" : "b5c235408a76f954",
+      "name" : "test_subtraction",
+      "uid" : "6c13617fb32e328b",
       "parentUid" : "2db20320d58fe0098644c110544c14bb",
       "status" : "passed",
       "time" : {
-        "start" : 1692773417042,
-        "stop" : 1692773417042,
+        "start" : 1692912283793,
+        "stop" : 1692912283793,
         "duration" : 0
       },
       "flaky" : false,
-      "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "Multiplication Test",
-      "uid" : "b15a402a3dfcac53",
+      "name" : "test_multiplication",
+      "uid" : "a636db10c0c66f0b",
       "parentUid" : "2db20320d58fe0098644c110544c14bb",
       "status" : "passed",
       "time" : {
-        "start" : 1692773417044,
-        "stop" : 1692773417044,
+        "start" : 1692912283797,
+        "stop" : 1692912283797,
         "duration" : 0
       },
       "flaky" : false,
-      "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "Division Test",
-      "uid" : "3c37d7b1e36058c4",
+      "name" : "test_division",
+      "uid" : "eac4f67562576b08",
       "parentUid" : "2db20320d58fe0098644c110544c14bb",
-      "status" : "passed",
+      "status" : "broken",
       "time" : {
-        "start" : 1692773417046,
-        "stop" : 1692773417046,
+        "start" : 1692912283799,
+        "stop" : 1692912283799,
         "duration" : 0
       },
       "flaky" : false,
-      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_failure",
+      "uid" : "d615d4ac9c7f3f0",
+      "parentUid" : "2db20320d58fe0098644c110544c14bb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1692912283831,
+        "stop" : 1692912283832,
+        "duration" : 1
+      },
+      "flaky" : false,
       "parameters" : [ ]
     } ],
     "uid" : "github-actions.pytest-allure-github-actions.test_calculator"
-  }, {
-    "name" : "test_calculator",
-    "children" : [ {
-      "name" : "Addition Test",
-      "uid" : "26d836b5a2d61f83",
-      "parentUid" : "397bf9d6e32c811905ac0d6f1aec4940",
-      "status" : "passed",
-      "time" : {
-        "start" : 1692808052685,
-        "stop" : 1692808052685,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Subtraction Test",
-      "uid" : "9ad749e5e7894cf2",
-      "parentUid" : "397bf9d6e32c811905ac0d6f1aec4940",
-      "status" : "passed",
-      "time" : {
-        "start" : 1692808052688,
-        "stop" : 1692808052688,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Multiplication Test",
-      "uid" : "c88938bebf92e264",
-      "parentUid" : "397bf9d6e32c811905ac0d6f1aec4940",
-      "status" : "passed",
-      "time" : {
-        "start" : 1692808052691,
-        "stop" : 1692808052691,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Division Test",
-      "uid" : "ded7b64f86f18b3d",
-      "parentUid" : "397bf9d6e32c811905ac0d6f1aec4940",
-      "status" : "passed",
-      "time" : {
-        "start" : 1692808052694,
-        "stop" : 1692808052694,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "397bf9d6e32c811905ac0d6f1aec4940"
-  } ],
-  "name" : "packages"
+  } ]
 }

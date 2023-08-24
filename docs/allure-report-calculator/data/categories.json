@@ -1,5 +1,45 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
-  "name" : "categories"
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "NameError: name 'pirnt' is not defined",
+      "children" : [ {
+        "name" : "test_division",
+        "uid" : "eac4f67562576b08",
+        "parentUid" : "111b344c9f1320f36ef551519a68f6da",
+        "status" : "broken",
+        "time" : {
+          "start" : 1692912283799,
+          "stop" : 1692912283799,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "111b344c9f1320f36ef551519a68f6da"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 3 == 4",
+      "children" : [ {
+        "name" : "test_failure",
+        "uid" : "d615d4ac9c7f3f0",
+        "parentUid" : "790dc4e06bbf460c609ce3cf08817579",
+        "status" : "failed",
+        "time" : {
+          "start" : 1692912283831,
+          "stop" : 1692912283832,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "790dc4e06bbf460c609ce3cf08817579"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
 }
