@@ -6,18 +6,16 @@ on:
     - cron: '*/10 * * * *'
 
 jobs:
-  trigger-wf-cases:
+  trigger-workflows:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger wf-cases
-        uses: actions/github-actions-runner@v3
-        with:
-          workflow_file: wf-cases.yml
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-  trigger-wf-calculator:
-    runs-on: ubuntu-latest
-    steps:
+      - name: Trigger wf-cases
+        run: |
+          gh workflow run wf-cases.yaml -R hpillai-akamai/pytest-allure-github-actions
+
       - name: Trigger wf-calculator
-        uses: actions/github-actions-runner@v3
-        with:
-          workflow_file: wf-calculator.yml
+        run: |
+          gh workflow run wf-calculator.yaml -R hpillai-akamai/pytest-allure-github-actions
