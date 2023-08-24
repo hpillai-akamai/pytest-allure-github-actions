@@ -4,7 +4,6 @@ import pytest
 
 @allure.epic("EPIC_1")
 @allure.parent_suite('Parent Suite 1')
-@allure.feature("Calculator Tests")
 @pytest.mark.sanity
 @pytest.mark.master
 @pytest.mark.basic_sanity
@@ -15,7 +14,6 @@ def test_addition():
 
 @allure.epic("EPIC_1")
 @allure.parent_suite('Parent Suite 1')
-@allure.feature("Calculator Tests")
 @pytest.mark.master
 @pytest.mark.basic_sanity
 def test_subtraction():
@@ -25,7 +23,6 @@ def test_subtraction():
 
 @allure.epic("EPIC_1")
 @allure.parent_suite('Parent Suite 1')
-@allure.feature("Calculator Tests")
 @pytest.mark.master
 @pytest.mark.basic_sanity
 def test_multiplication():
@@ -35,7 +32,6 @@ def test_multiplication():
 
 @allure.epic("EPIC_1")
 @allure.parent_suite('Parent Suite 1')
-@allure.feature("Calculator Tests")
 @pytest.mark.master
 def test_division():
     allure.dynamic.suite("SUITE_1")
@@ -44,7 +40,6 @@ def test_division():
 
 @allure.epic("EPIC_1")
 @allure.parent_suite('Parent Suite 1')
-@allure.feature("Calculator Tests")
 @pytest.mark.basic_sanity
 def test_failure():
     allure.dynamic.suite("SUITE_1")
