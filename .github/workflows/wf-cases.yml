@@ -1,16 +1,16 @@
 name: Run component tests for cases and show reports
 
-on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'allure-results/**'
-      - 'allure-report-**'
-      - 'docs/**'
-  pull_request:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
+#     paths-ignore:
+#       - 'allure-results/**'
+#       - 'allure-report-**'
+#       - 'docs/**'
+#   pull_request:
+#     branches:
+#       - main
 
 jobs:
   component-tests-cases:
@@ -80,7 +80,7 @@ jobs:
 
           
       - name: Publish to GitHub Pages test_cases
-        if: github.event_name == 'push'  
+        if: github.event_name == 'schedule'  
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.MY_GITHUB_TOKEN }}
