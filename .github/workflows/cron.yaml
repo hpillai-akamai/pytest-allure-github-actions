@@ -9,13 +9,12 @@ jobs:
   trigger-workflows:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
       - name: Trigger wf-cases
-        run: |
-          gh workflow run wf-cases.yaml -R hpillai-akamai/pytest-allure-github-actions
+        uses: actions/github-actions-runner@v3
+        with:
+          workflow_file: wf-cases.yaml
 
       - name: Trigger wf-calculator
-        run: |
-          gh workflow run wf-calculator.yaml -R hpillai-akamai/pytest-allure-github-actions
+        uses: actions/github-actions-runner@v3
+        with:
+          workflow_file: wf-calculator.yaml
