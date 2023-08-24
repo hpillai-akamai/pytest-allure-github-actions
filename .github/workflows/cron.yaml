@@ -10,40 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger wf-cases.yml workflow
-        uses: actions/github-script@v5
-        with:
-          script: |
-            const { Octokit } = require("@octokit/core");
-            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-
-            async function createWorkflowDispatch() {
-              const response = await octokit.request("POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches", {
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                workflow_id: 'wf-cases.yml'
-              });
-              console.log(response);
-            }
-
-            createWorkflowDispatch();
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/wf-cases.yml/dispatches
+          echo "Workflow wf-cases.yml triggered."
 
   trigger-wf-calculator:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger wf-calculator.yml workflow
-        uses: actions/github-script@v5
-        with:
-          script: |
-            const { Octokit } = require("@octokit/core");
-            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-
-            async function createWorkflowDispatch() {
-              const response = await octokit.request("POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches", {
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                workflow_id: 'wf-calculator.yml'
-              });
-              console.log(response);
-            }
-
-            createWorkflowDispatch();
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/wf-calculator.yml/dispatches
+          echo "Workflow wf-calculator.yml triggered."
