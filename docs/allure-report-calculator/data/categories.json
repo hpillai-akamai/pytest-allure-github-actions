@@ -1,5 +1,73 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "NameError: name 'pirnt' is not defined",
+      "children" : [ {
+        "name" : "test_division",
+        "uid" : "160ffba987125963",
+        "parentUid" : "111b344c9f1320f36ef551519a68f6da",
+        "status" : "broken",
+        "time" : {
+          "start" : 1692912283799,
+          "stop" : 1692912283799,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_division",
+        "uid" : "b3bf428bc14fab73",
+        "parentUid" : "111b344c9f1320f36ef551519a68f6da",
+        "status" : "broken",
+        "time" : {
+          "start" : 1692913653614,
+          "stop" : 1692913653614,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "111b344c9f1320f36ef551519a68f6da"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 3 == 4",
+      "children" : [ {
+        "name" : "test_failure",
+        "uid" : "60a5b764e8a49640",
+        "parentUid" : "790dc4e06bbf460c609ce3cf08817579",
+        "status" : "failed",
+        "time" : {
+          "start" : 1692912283831,
+          "stop" : 1692912283832,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_failure",
+        "uid" : "98fc0d41153d24bd",
+        "parentUid" : "790dc4e06bbf460c609ce3cf08817579",
+        "status" : "failed",
+        "time" : {
+          "start" : 1692913653644,
+          "stop" : 1692913653644,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "790dc4e06bbf460c609ce3cf08817579"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
   "name" : "categories"
 }
