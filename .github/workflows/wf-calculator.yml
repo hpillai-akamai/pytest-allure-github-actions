@@ -74,7 +74,7 @@ jobs:
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           allure generate allure-results/allure-results-calculator -o allure-report-2
           cp -r allure-report-2/history/. allure-results/allure-results-calculator/history/.
-          cp -r allure-report-calculator/. docs/allure-report-calculator/.
+          cp -r allure-report-2/. docs/allure-report-calculator/.
           git pull
           git add allure-results
           git add docs
