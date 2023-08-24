@@ -1,0 +1,35 @@
+name: Trigger Workflows on Schedule
+
+on:
+  schedule:
+    - cron: "0 20 * * *"  
+    - cron: "30 20 * * *" 
+
+jobs:
+  trigger-wf-cases:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger wf-cases.yml workflow
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'wf-cases.yml',  
+            });
+
+  trigger-wf-calculator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger wf-calculator.yml workflow
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'wf-calculator.yml',  
+            });
