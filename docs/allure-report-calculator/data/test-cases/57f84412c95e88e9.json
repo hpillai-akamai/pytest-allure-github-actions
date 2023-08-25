@@ -1,0 +1,580 @@
+{
+  "uid" : "57f84412c95e88e9",
+  "name" : "test_failure",
+  "fullName" : "test_calculator#test_failure",
+  "historyId" : "2b9180ad6a4e73145c7220e56ef622f9",
+  "time" : {
+    "start" : 1692958327355,
+    "stop" : 1692958327356,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 3 == 4",
+  "statusTrace" : "@allure.epic(\"EPIC_1\")\n    @allure.parent_suite('Parent Suite 1')\n    @pytest.mark.basic_sanity\n    def test_failure():\n        allure.dynamic.suite(\"SUITE_1\")\n        print(\"TC failure here\")\n>       assert 3 == 4\nE       assert 3 == 4\n\ntest_calculator.py:47: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 3 == 4",
+    "statusTrace" : "@allure.epic(\"EPIC_1\")\n    @allure.parent_suite('Parent Suite 1')\n    @pytest.mark.basic_sanity\n    def test_failure():\n        allure.dynamic.suite(\"SUITE_1\")\n        print(\"TC failure here\")\n>       assert 3 == 4\nE       assert 3 == 4\n\ntest_calculator.py:47: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1bc164c1cee93bb2",
+      "name" : "stdout",
+      "source" : "1bc164c1cee93bb2.txt",
+      "type" : "text/plain",
+      "size" : 16
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "SUITE_1"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Parent Suite 1"
+  }, {
+    "name" : "epic",
+    "value" : "EPIC_1"
+  }, {
+    "name" : "tag",
+    "value" : "basic_sanity"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1230-523"
+  }, {
+    "name" : "thread",
+    "value" : "2098-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_calculator"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e1181dcc3eae234b",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692956212318,
+        "stop" : 1692956212318,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "e2017e12a8689b60",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692952635936,
+        "stop" : 1692952635937,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "ec1bd4718be3dfe0",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692948994387,
+        "stop" : 1692948994388,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "491f118714a8fea",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692945688561,
+        "stop" : 1692945688561,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "18ba96447a03ea27",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692945035990,
+        "stop" : 1692945035991,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "33b93ff3ef8e6f0d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692944406213,
+        "stop" : 1692944406213,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "814e76f898bec8d7",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692942686707,
+        "stop" : 1692942686707,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "a2e107a06d9dd8d4",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692941978810,
+        "stop" : 1692941978810,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "bec01c52d6fe8be9",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692941282601,
+        "stop" : 1692941282601,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "25ad05cb22ba7944",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692940464464,
+        "stop" : 1692940464465,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "ea7100d37cf5153",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692939050669,
+        "stop" : 1692939050669,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "a763bce017256bf7",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692938340100,
+        "stop" : 1692938340100,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "a11a9164d1b87936",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692937642428,
+        "stop" : 1692937642428,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "e6b75c8ec1f5d0a0",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692936435882,
+        "stop" : 1692936435882,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "abe75526ca46ea6f",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692935357129,
+        "stop" : 1692935357130,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "4826f8eb7de0b0f8",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692934655824,
+        "stop" : 1692934655825,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "8807a27d4fb48859",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692933733344,
+        "stop" : 1692933733344,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "f20cb98d5369bcb5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692932800218,
+        "stop" : 1692932800219,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "d04ba411db895401",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692931772303,
+        "stop" : 1692931772303,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "bd69d24d7c8ae445",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692931061543,
+        "stop" : 1692931061543,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "2f501e74d91c3576",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692930220135,
+        "stop" : 1692930220136,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "7e69321c41f15eca",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692928708393,
+        "stop" : 1692928708394,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "7cf8ccaf910b82af",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692926191497,
+        "stop" : 1692926191497,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "55a436ac68e7a420",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692921434719,
+        "stop" : 1692921434719,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "f50de2539f862a0e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692920522528,
+        "stop" : 1692920522528,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "4e2dac2b71c3df92",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692919786939,
+        "stop" : 1692919786940,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "897e09a70ff3b7f6",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692919080295,
+        "stop" : 1692919080296,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "80e2fe155875aaaf",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692917954314,
+        "stop" : 1692917954314,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "a3c91d77eadac4b",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692917242871,
+        "stop" : 1692917242871,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "91c1a5a1bb9658",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692916265676,
+        "stop" : 1692916265676,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "2cf2d8901f3c8e01",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692915539097,
+        "stop" : 1692915539098,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "8edc36b5863e9f2d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692914351017,
+        "stop" : 1692914351017,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "ce3a92912a95c6d1",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692913653644,
+        "stop" : 1692913653644,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "bc3da387df18db7a",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 3 == 4",
+      "time" : {
+        "start" : 1692912646680,
+        "stop" : 1692912646681,
+        "duration" : 1
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 35,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 35
+      },
+      "items" : [ {
+        "uid" : "1423e336b505ca00",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692956212318,
+          "stop" : 1692956212318,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b58266baaf309991",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692952635936,
+          "stop" : 1692952635937,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "644d106606cc53b9",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692948994387,
+          "stop" : 1692948994388,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "3d90da7568bf25e2",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692945688561,
+          "stop" : 1692945688561,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "130c16fc97b54ecc",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692945035990,
+          "stop" : 1692945035991,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "26f5e31a13ce1ef5",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692944406213,
+          "stop" : 1692944406213,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "dca4d64e98a7ea37",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692942686707,
+          "stop" : 1692942686707,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "a82d02a87715d0b4",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692941978810,
+          "stop" : 1692941978810,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "bb4d9d6899a9678a",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692941282601,
+          "stop" : 1692941282601,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d92d51b071bfdd07",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692940464464,
+          "stop" : 1692940464465,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "5e2bfe24bff82047",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692939050669,
+          "stop" : 1692939050669,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "81f93f8f9ac5d213",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692938340100,
+          "stop" : 1692938340100,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "41ca5ddee3cf827f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692937642428,
+          "stop" : 1692937642428,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "5d087832326119e1",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692936435882,
+          "stop" : 1692936435882,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d149274ad124549c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692935357129,
+          "stop" : 1692935357130,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "db4ca6620ab9bac",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692934655824,
+          "stop" : 1692934655825,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "cad24e788d522f61",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692933733344,
+          "stop" : 1692933733344,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "1b6ff29e738a76b0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692932800218,
+          "stop" : 1692932800219,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "dddbde9f6ce63b40",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692931772303,
+          "stop" : 1692931772303,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "58dc8d1d3450b634",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 3 == 4",
+        "time" : {
+          "start" : 1692931061543,
+          "stop" : 1692931061543,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "basic_sanity" ]
+  },
+  "source" : "57f84412c95e88e9.json",
+  "parameterValues" : [ ]
+}
