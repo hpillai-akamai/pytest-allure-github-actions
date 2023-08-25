@@ -2,14 +2,14 @@ name: Run component tests for cases and show reports
 
 on:
   schedule:
-    - cron: '*/6 * * * *'  
-#   push:
+    - cron: '15 * * * *'  
+  push:
 #     branches:
 #       - main
-#     paths-ignore:
-#       - 'allure-results/**'
-#       - 'allure-report-**'
-#       - 'docs/**'
+    paths-ignore:
+      - 'allure-results/**'
+      - 'allure-report-**'
+      - 'docs/**'
 #   pull_request:
 #     branches:
 #       - main
