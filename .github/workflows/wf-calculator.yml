@@ -2,15 +2,15 @@ name: Run component tests for calculator and show reports
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  
+    - cron: '30 * * * *'  
     
-#   push:
+  push:
 #     branches:
 #       - main
-#     paths-ignore:
-#       - 'allure-results/**'
-#       - 'allure-report-**'
-#       - 'docs/**'
+    paths-ignore:
+      - 'allure-results/**'
+      - 'allure-report-**'
+      - 'docs/**'
 #   pull_request:
 #     branches:
 #       - main
