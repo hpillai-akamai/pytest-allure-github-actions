@@ -31,11 +31,15 @@ jobs:
           echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
       - name: Start SSH Agent
-        run: eval "$(ssh-agent -s)"
+        run: eval $(ssh-agent -s)
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
 
       - name: Add SSH Private Key
         run: |
-          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-add ~/.ssh/id_ed25519
 
       - name: Set up SSH Configuration
         run: |
