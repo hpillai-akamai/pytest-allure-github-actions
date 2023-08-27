@@ -35,3 +35,32 @@ jobs:
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           allure --version
           pytest test_calculator.py -v -p no:warnings --alluredir=./allure-results/allure-results-calculator
+
+
+      - name: Commit Allure Reports
+        if: ${{ github.actor != 'github-actions[bot]' }}
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_ed25519
+          git remote -v
+          git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
+          git config --global user.email "hpillai@akamai.com"
+          git config --global user.name "hpillai-akamai"
+          export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
+          allure generate allure-results/allure-results-cases -o allure-report-1 
+          cp -r allure-report-1/history/. allure-results/allure-results-cases/history/.
+          cp -r allure-report-1/. docs/allure-report-cases/.
+          allure generate allure-results/allure-results-calculator -o allure-report-2
+          cp -r allure-report-2/history/. allure-results/allure-results-calculator/history/.
+          cp -r allure-report-calculator/. docs/allure-report-calculator/.
+          # git add allure-report-cases
+          # git add allure-report-calculator
+          git add allure-results
+          git add docs
+          git commit -m "Add Allure reports"
+          git push origin main
