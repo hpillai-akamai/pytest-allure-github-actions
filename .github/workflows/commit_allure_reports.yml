@@ -36,10 +36,12 @@ jobs:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
 
       - name: Add SSH Private Key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           eval `ssh-agent -s`
           mkdir -p $HOME/.ssh
-          echo -e "$SSH_PRIVATE_KEY\n" | tr -d '\r' > $HOME/.ssh/id_ed25519
+          echo -e "$SSH_PRIVATE_KEY" | tr -d '\r' > $HOME/.ssh/id_ed25519
           chmod 600 $HOME/.ssh/id_ed25519
           ssh-add $HOME/.ssh/id_ed25519
 
