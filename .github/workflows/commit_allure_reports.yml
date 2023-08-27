@@ -21,23 +21,16 @@ jobs:
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
           fetch-depth: 0
       
-      - name: Commit Allure Reports
-        if: ${{ github.actor != 'github-actions[bot]' }}
+      - name: Set up ssh-agent
         run: |
           sudo apt-get update
           sudo apt-get install openssh-client -y
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          
-          # Configure the user's SSH private key
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-
-          # Start SSH agent and add the key
           eval "$(ssh-agent -s)"
-          ssh-add ~/.ssh/id_ed25519
+          ssh-add <(echo "$SSH_PRIVATE_KEY")
           
-          # Set Git configuration
+      - name: Commit Allure Reports
+        if: ${{ github.actor != 'github-actions[bot]' }}
+        run: |
           git remote -v
           git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
           git config --global user.email "hpillai@akamai.com"
