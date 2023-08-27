@@ -24,6 +24,8 @@ jobs:
       - name: Commit Allure Reports
         if: ${{ github.actor != 'github-actions[bot]' }}
         run: |
+          sudo apt-get update
+          sudo apt-get install openssh-client -y
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
           
