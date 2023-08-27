@@ -1,0 +1,19 @@
+# show_allure_report.yml
+name: Show Allure Report
+
+on:
+  workflow_run:
+    workflows: ["Run component tests for calculator and show reports"]
+    types:
+      - completed
+
+jobs:
+  show-allure-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show allure report
+        continue-on-error: true
+        run: |
+          ls allure-2.15.0/bin
+          ls allure-results
+          zip -r allure-reports.zip allure-results
