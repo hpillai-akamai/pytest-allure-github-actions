@@ -29,6 +29,7 @@ jobs:
     # runs-on: ubuntu-latest
     # steps:
     uses: ./.github/workflows/commit_allure_reports.yml
+    secrets: inherit
 
   publish_to_pages:
     needs: commit_allure_reports
