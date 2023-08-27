@@ -1,0 +1,19 @@
+# archive_allure_artifact.yml
+name: Archive Allure Artifact
+
+on:
+  workflow_run:
+    workflows: ["Run component tests for calculator and show reports"]
+    types:
+      - completed
+
+jobs:
+  archive-allure-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Archive Allure zip artifact
+        continue-on-error: true
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-reports-zip
+          path: allure-reports.zip
