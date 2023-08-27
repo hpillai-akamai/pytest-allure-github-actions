@@ -2,10 +2,15 @@
 name: Install Allure and Run Tests
 
 on:
-  push:
-    branches:
-      - main
-
+  workflow_call:
+    inputs:
+      config-path:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: true
+        
 jobs:
   install-and-run-tests:
     runs-on: ubuntu-latest
