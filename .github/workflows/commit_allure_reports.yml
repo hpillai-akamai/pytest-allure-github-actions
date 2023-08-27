@@ -15,12 +15,25 @@ jobs:
   commit-allure-reports:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up environment and SSH
+      - name: Set up environment
         run: |
-          'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client wget gnupg -y )'
-          wget -qO- https://get.docker.com/gpg | apt-key add -
-          eval "$(ssh-agent -s)"
+          if ! command -v ssh-agent > /dev/null; then
+            apt-get update -y
+            apt-get install openssh-client wget gnupg -y
+          fi
+
+      - name: Install Docker GPG Key
+        run: wget -qO- https://get.docker.com/gpg | apt-key add -
+
+      - name: Start SSH Agent
+        run: eval "$(ssh-agent -s)"
+
+      - name: Add SSH Private Key
+        run: |
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+
+      - name: Set up SSH Configuration
+        run: |
           mkdir -p ~/.ssh
           touch ~/.ssh/config
           chmod -R 400 ~/.ssh
