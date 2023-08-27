@@ -14,23 +14,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check if triggering user is GitHub Actions bot
-        id: check_bot
         run: echo "Is GitHub Actions bot? ${{ github.actor == 'github-actions[bot]' }}" >> /dev/null
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
           python-version: 3.8
+      - name: install and run tests
       - uses: ./.github/workflows/install_and_run_tests.yml
       - name: Check if triggering user is GitHub Actions bot
-        id: check_bot
         run: echo "Is GitHub Actions bot? ${{ github.actor == 'github-actions[bot]' }}" >> /dev/null
+
+      - name: commit allure reports
       - uses: ./.github/workflows/commit_allure_reports.yml
 
-
+      - name: publish to pages
       - uses: ./.github/workflows/publish_to_pages.yml
 
-
+      - name: show allure report
       - uses: ./.github/workflows/show_allure_report.yml
 
-
+      - name: archive allure artifact
       - uses: ./.github/workflows/archive_allure_artifact.yml
