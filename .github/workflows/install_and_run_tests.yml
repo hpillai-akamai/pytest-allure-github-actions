@@ -52,12 +52,12 @@ jobs:
           git config --global user.email "hpillai@akamai.com"
           git config --global user.name "hpillai-akamai"
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
-          allure generate allure-results/allure-results-cases -o allure-report-1 
-          cp -r allure-report-1/history/. allure-results/allure-results-cases/history/.
-          cp -r allure-report-1/. docs/allure-report-cases/.
+          # allure generate allure-results/allure-results-cases -o allure-report-1 
+          # cp -r allure-report-1/history/. allure-results/allure-results-cases/history/.
+          # cp -r allure-report-1/. docs/allure-report-cases/.
           allure generate allure-results/allure-results-calculator -o allure-report-2
           cp -r allure-report-2/history/. allure-results/allure-results-calculator/history/.
-          cp -r allure-report-calculator/. docs/allure-report-calculator/.
+          cp -r allure-report-2/. docs/allure-report-calculator/.
           # git add allure-report-cases
           # git add allure-report-calculator
           git add allure-results
