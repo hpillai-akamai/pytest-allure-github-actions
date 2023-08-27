@@ -8,8 +8,8 @@ on:
         required: false
         type: string
     secrets:
-      token:
-        required: false
+      SSH_PRIVATE_KEY:
+        required: true
 
 jobs:
   commit-allure-reports:
@@ -17,8 +17,8 @@ jobs:
     steps:
       - name: Commit Allure Reports
         if: ${{ github.actor != 'github-actions[bot]' }}
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        # env:
+        #   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
