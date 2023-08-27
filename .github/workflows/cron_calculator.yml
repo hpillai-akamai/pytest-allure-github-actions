@@ -1,8 +1,9 @@
 name: Run component tests for calculator and show reports
 
-on:
-  schedule:
-    - cron: '5 * * * *'
+on: 
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '5 * * * *'
   push:
     paths-ignore:
       - 'allure-results/**'
