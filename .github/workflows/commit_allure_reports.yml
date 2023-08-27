@@ -15,20 +15,33 @@ jobs:
   commit-allure-reports:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fetch-depth: 0
+      
       - name: Commit Allure Reports
         if: ${{ github.actor != 'github-actions[bot]' }}
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          
+          # Configure the user's SSH private key
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
+
+          # Start SSH agent and add the key
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_ed25519
+          
+          # Set Git configuration
           git remote -v
           git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
           git config --global user.email "hpillai@akamai.com"
           git config --global user.name "hpillai-akamai"
+          
+          # Rest of the commands for Allure report commit
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           allure generate allure-results/allure-results-calculator -o allure-report-2
           cp -r allure-report-2/history/. allure-results/allure-results-calculator/history/.
