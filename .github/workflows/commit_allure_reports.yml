@@ -37,6 +37,7 @@ jobs:
 
       - name: Add SSH Private Key
         run: |
+          eval `ssh-agent -s`
           mkdir -p $HOME/.ssh
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > $HOME/.ssh/id_ed25519
           chmod 600 $HOME/.ssh/id_ed25519
