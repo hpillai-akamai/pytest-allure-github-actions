@@ -1,121 +1,143 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "children" : [ {
-    "name" : "github-actions.pytest-allure-github-actions",
+    "name" : "Parent Suite 1",
     "children" : [ {
-      "name" : "test_calculator",
+      "name" : "SUITE_1",
       "children" : [ {
-        "name" : "Addition Test",
-        "uid" : "58d69339a61b2077",
-        "parentUid" : "8853b84b5061971dda351fb5f88107f1",
+        "name" : "test_addition",
+        "uid" : "ac05fb8b67a17551",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
         "status" : "passed",
         "time" : {
-          "start" : 1692773417039,
-          "stop" : 1692773417040,
+          "start" : 1692912283790,
+          "stop" : 1692912283791,
           "duration" : 1
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Subtraction Test",
-        "uid" : "b5c235408a76f954",
-        "parentUid" : "8853b84b5061971dda351fb5f88107f1",
+        "name" : "test_subtraction",
+        "uid" : "e61c65da594200d3",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
         "status" : "passed",
         "time" : {
-          "start" : 1692773417042,
-          "stop" : 1692773417042,
+          "start" : 1692912283793,
+          "stop" : 1692912283793,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Multiplication Test",
-        "uid" : "b15a402a3dfcac53",
-        "parentUid" : "8853b84b5061971dda351fb5f88107f1",
+        "name" : "test_multiplication",
+        "uid" : "9bf53a37a71988ba",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
         "status" : "passed",
         "time" : {
-          "start" : 1692773417044,
-          "stop" : 1692773417044,
+          "start" : 1692912283797,
+          "stop" : 1692912283797,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Division Test",
-        "uid" : "3c37d7b1e36058c4",
-        "parentUid" : "8853b84b5061971dda351fb5f88107f1",
+        "name" : "test_division",
+        "uid" : "9b7560bd70d6bb80",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1692912283799,
+          "stop" : 1692912283799,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_failure",
+        "uid" : "3bd7de7b0d915ee8",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1692912283831,
+          "stop" : 1692912283832,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_addition",
+        "uid" : "64aa25182f697cc3",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
         "status" : "passed",
         "time" : {
-          "start" : 1692773417046,
-          "stop" : 1692773417046,
+          "start" : 1693165108681,
+          "stop" : 1693165108682,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_subtraction",
+        "uid" : "cd3bf8d7d10ebb30",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1693165108684,
+          "stop" : 1693165108684,
           "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_multiplication",
+        "uid" : "1bb6e7f01aed1283",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1693165108685,
+          "stop" : 1693165108686,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_division",
+        "uid" : "fee236c3e63dece3",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1693165108687,
+          "stop" : 1693165108687,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_failure",
+        "uid" : "9ff92916cab93c1e",
+        "parentUid" : "493a142f4de8fde856897fdc388ff0a0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1693165108707,
+          "stop" : 1693165108708,
+          "duration" : 1
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8853b84b5061971dda351fb5f88107f1"
+      "uid" : "493a142f4de8fde856897fdc388ff0a0"
     } ],
-    "uid" : "5327b545e3c8166c6b2f8e9dcdf9c6e9"
-  }, {
-    "name" : "test_calculator",
-    "children" : [ {
-      "name" : "Addition Test",
-      "uid" : "26d836b5a2d61f83",
-      "parentUid" : "730172bfce097dc2402d3087336a1622",
-      "status" : "passed",
-      "time" : {
-        "start" : 1692808052685,
-        "stop" : 1692808052685,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Subtraction Test",
-      "uid" : "9ad749e5e7894cf2",
-      "parentUid" : "730172bfce097dc2402d3087336a1622",
-      "status" : "passed",
-      "time" : {
-        "start" : 1692808052688,
-        "stop" : 1692808052688,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Multiplication Test",
-      "uid" : "c88938bebf92e264",
-      "parentUid" : "730172bfce097dc2402d3087336a1622",
-      "status" : "passed",
-      "time" : {
-        "start" : 1692808052691,
-        "stop" : 1692808052691,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Division Test",
-      "uid" : "ded7b64f86f18b3d",
-      "parentUid" : "730172bfce097dc2402d3087336a1622",
-      "status" : "passed",
-      "time" : {
-        "start" : 1692808052694,
-        "stop" : 1692808052694,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "730172bfce097dc2402d3087336a1622"
+    "uid" : "65d0eef147c98286e9a7c7d5b6ade761"
   } ],
   "name" : "suites"
 }
