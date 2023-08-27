@@ -1,3 +1,4 @@
+# commit_allure_reports.yml
 name: Commit Allure Reports
 
 on:
@@ -14,18 +15,16 @@ jobs:
   commit-allure-reports:
     runs-on: ubuntu-latest
     steps:
-      - name: Commit Allure Reports
-        if: ${{ github.actor != 'github-actions[bot]' }}
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Set up environment
         run: |
-          'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client wget gnupg -y )'
+          if ! command -v ssh-agent > /dev/null; then
+            apt-get update -y
+            apt-get install openssh-client wget gnupg -y
+          fi
           wget -qO- https://get.docker.com/gpg | apt-key add -
 
-          # mkdir -p ~/.ssh
-          # echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-          # chmod 600 ~/.ssh/id_ed25519
-
+      - name: Set up SSH
+        run: |
           eval "$(ssh-agent -s)"
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
           mkdir -p ~/.ssh
@@ -33,9 +32,11 @@ jobs:
           touch ~/.ssh/known_hosts
           chmod -R 400 ~/.ssh
           ssh-keyscan <ip> >> ~/.ssh/known_hosts
-          '[[ -f /.dockerinit ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+          [[ -f /.dockerinit ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
-          # ssh-add ~/.ssh/id_ed25519
+      - name: Commit Allure Reports
+        if: ${{ github.actor != 'github-actions[bot]' }}
+        run: |
           git remote -v
           git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
           git config --global user.email "hpillai@akamai.com"
