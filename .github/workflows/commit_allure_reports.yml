@@ -19,9 +19,15 @@ jobs:
         run: |
           if ! command -v ssh-agent > /dev/null; then
             apt-get update -y
-            apt-get install openssh-client wget gnupg -y
+            apt-get install openssh-client -y
           fi
-          wget -qO- https://get.docker.com/gpg | apt-key add -
+
+      - name: Install Docker
+        run: |
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sudo sh get-docker.sh
+          sudo usermod -aG docker runner
+          docker --version
 
       - name: Set up SSH
         run: |
