@@ -16,23 +16,33 @@ jobs:
     steps:
       - name: Check if triggering user is GitHub Actions bot
         run: echo "Is GitHub Actions bot? ${{ github.actor == 'github-actions[bot]' }}" >> /dev/null
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - name: install and run tests
-      - uses: ./.github/workflows/install_and_run_tests.yml
-      - name: Check if triggering user is GitHub Actions bot
-        run: echo "Is GitHub Actions bot? ${{ github.actor == 'github-actions[bot]' }}" >> /dev/null
 
-      - name: commit allure reports
+  install_and_run_tests:
+    needs: trigger_component_tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/install_and_run_tests.yml
+
+  commit_allure_reports:
+    needs: install_and_run_tests
+    runs-on: ubuntu-latest
+    steps:
       - uses: ./.github/workflows/commit_allure_reports.yml
 
-      - name: publish to pages
+  publish_to_pages:
+    needs: commit_allure_reports
+    runs-on: ubuntu-latest
+    steps:
       - uses: ./.github/workflows/publish_to_pages.yml
 
-      - name: show allure report
+  show_allure_report:
+    needs: publish_to_pages
+    runs-on: ubuntu-latest
+    steps:
       - uses: ./.github/workflows/show_allure_report.yml
 
-      - name: archive allure artifact
+  archive_allure_artifact:
+    needs: show_allure_report
+    runs-on: ubuntu-latest
+    steps:
       - uses: ./.github/workflows/archive_allure_artifact.yml
