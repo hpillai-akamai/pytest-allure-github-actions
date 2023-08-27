@@ -1,0 +1,31 @@
+# install_and_run_tests.yml
+name: Install Allure and Run Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install-and-run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Install Allure command-line tool and Run test_calculator.py
+        continue-on-error: true
+        run: |
+          sudo apt install allure
+          wget https://github.com/allure-framework/allure2/releases/download/2.15.0/allure-2.15.0.zip
+          unzip allure-2.15.0.zip
+          export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
+          allure --version
+          pytest test_calculator.py -v -p no:warnings --alluredir=./allure-results/allure-results-calculator
