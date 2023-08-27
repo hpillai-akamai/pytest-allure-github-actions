@@ -26,8 +26,7 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           eval "$(ssh-agent -s)"
-          # ssh-add ~/.ssh/id_ed25519
-          ssh-add "$SSH_PRIVATE_KEY" | tr -d '\r'
+          ssh-add ~/.ssh/id_ed25519
           git remote -v
           git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
           git config --global user.email "hpillai@akamai.com"
