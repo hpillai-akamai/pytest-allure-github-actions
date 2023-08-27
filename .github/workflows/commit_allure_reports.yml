@@ -9,10 +9,10 @@ on:
         type: string
     secrets:
       SSH_PRIVATE_KEY:
-        required: true
+        required: false
 
 jobs:
-  commit-allure-reports:
+  commit_allure_reports:
     runs-on: ubuntu-latest
     steps:
       - name: Commit Allure Reports
