@@ -26,24 +26,24 @@ jobs:
 
   commit_allure_reports:
     needs: install_and_run_tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/workflows/commit_allure_reports.yml
+    # runs-on: ubuntu-latest
+    # steps:
+    uses: ./.github/workflows/commit_allure_reports.yml
 
   publish_to_pages:
     needs: commit_allure_reports
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/workflows/publish_to_pages.yml
+    # runs-on: ubuntu-latest
+    # steps:
+    uses: ./.github/workflows/publish_to_pages.yml
 
   show_allure_report:
     needs: publish_to_pages
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/workflows/show_allure_report.yml
+    # runs-on: ubuntu-latest
+    # steps:
+    uses: ./.github/workflows/show_allure_report.yml
 
   archive_allure_artifact:
     needs: show_allure_report
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/workflows/archive_allure_artifact.yml
+    # runs-on: ubuntu-latest
+    # steps:
+    uses: ./.github/workflows/archive_allure_artifact.yml
