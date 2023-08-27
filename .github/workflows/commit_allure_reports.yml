@@ -18,12 +18,17 @@ jobs:
       - name: Set up environment
         run: |
           if ! command -v ssh-agent > /dev/null; then
-            apt-get update -y
-            apt-get install openssh-client wget gnupg -y
+            sudo apt-get update -y
+            sudo apt-get install openssh-client wget gnupg -y
           fi
 
       - name: Install Docker GPG Key
-        run: wget -qO- https://get.docker.com/gpg | apt-key add -
+        run: |
+          curl -fsSL https://get.docker.com/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+      - name: Set up Docker repository
+        run: |
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
       - name: Start SSH Agent
         run: eval "$(ssh-agent -s)"
@@ -38,6 +43,11 @@ jobs:
           touch ~/.ssh/config
           chmod -R 400 ~/.ssh
           '[[ -f /.dockerinit ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+      - name: Install Docker
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
       - name: Commit Allure Reports
         if: ${{ github.actor != 'github-actions[bot]' }}
