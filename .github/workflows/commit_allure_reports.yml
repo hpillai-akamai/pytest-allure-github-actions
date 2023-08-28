@@ -55,7 +55,7 @@ jobs:
         run: |
           pwd
           ls
-          unzip allure-results.zip -d allure-results-cpy
+          unzip $PWD/allure-results.zip -d $PWD/allure-results-cpy
           ls
 
       - name: Commit Allure Reports
