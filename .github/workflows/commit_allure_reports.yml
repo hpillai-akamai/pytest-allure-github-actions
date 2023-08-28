@@ -49,17 +49,12 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: allure-results-zip
-          path: allure-results.zip
+          path: ${{ inputs.data-folder }}
 
       - name: Unzip allure-results.zip
         run: |
-          # unzip $PWD/allure-results.zip -d $PWD/allure-results-cpy
-          cd allure-results.zip
-          ls -la
-          # ${{ runner.temp }}/allure-results.zip -l
-          unzip /home/runner/work/pytest-allure-github-actions/pytest-allure-github-actions/allure-results.zip -d /home/runner/work/pytest-allure-github-actions/pytest-allure-github-actions/allure-artifact
-          pwd
-          ls /home/runner/work/pytest-allure-github-actions/pytest-allure-github-actions
+          cd ${{ inputs.data-folder }}
+          unzip allure-results.zip
 
       - name: Commit Allure Reports
         run: |
