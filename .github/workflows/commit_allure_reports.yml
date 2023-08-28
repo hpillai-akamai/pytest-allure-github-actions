@@ -55,10 +55,8 @@ jobs:
         run: |
           pwd
           ls
-          cd ${{ inputs.data-folder }}
-          pwd
+          unzip allure-results.zip -d allure-results-cpy
           ls
-          unzip ${{ inputs.data-folder }}/allure-results.zip
 
       - name: Commit Allure Reports
         run: |
