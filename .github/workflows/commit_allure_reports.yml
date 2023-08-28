@@ -18,10 +18,12 @@ jobs:
       # - name: Checkout Repository
       #   uses: actions/checkout@v2
       - name: Add private key and pre-commit steps
-        if: ${{ github.actor != 'github-actions[bot]' }}
+        # if: ${{ github.actor != 'github-actions[bot]' }}
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
+          pwd
+          ls
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
