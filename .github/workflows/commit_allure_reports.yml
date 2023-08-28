@@ -46,6 +46,8 @@ jobs:
 
       - name: Unzip allure-results.zip
         run: |
+          pwd
+          ls
           unzip allure-results.zip
 
       - name: Commit Allure Reports
