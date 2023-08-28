@@ -48,11 +48,14 @@ jobs:
       - name: Import artifacts from test run
         uses: actions/download-artifact@v2
         with:
-          name: allure-results-zip
-          path: ./allure-results.zip
+          name: allure-results.zip
+          path: allure-results.zip
 
       - name: Unzip allure-results.zip
         run: |
+          pwd
+          ls
+          ls -lrth
           unzip ./allure-results.zip -d ./allure-results-cpy
 
       - name: Commit Allure Reports
