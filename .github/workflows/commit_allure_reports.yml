@@ -4,6 +4,9 @@ name: Commit Allure Reports
 on:
   workflow_call:
     inputs:
+      data-folder:
+        required: false
+        type: string
       config-path:
         required: false
         type: string
@@ -52,7 +55,10 @@ jobs:
         run: |
           pwd
           ls
-          unzip .allure-results.zip
+          cd ${{ inputs.data-folder }}
+          pwd
+          ls
+          unzip ${{ inputs.data-folder }}/allure-results.zip
 
       - name: Commit Allure Reports
         run: |
