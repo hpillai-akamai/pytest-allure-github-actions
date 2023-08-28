@@ -49,11 +49,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: allure-results-zip
-          path: ${{ inputs.data-folder }}
+          path: ./allure-results.zip
 
       - name: Unzip allure-results.zip
         run: |
-          unzip ${{ inputs.data-folder }}/allure-results.zip -d ${{ inputs.data-folder }}/allure-results-cpy
+          unzip ./allure-results.zip -d ./allure-results-cpy
 
       - name: Commit Allure Reports
         run: |
