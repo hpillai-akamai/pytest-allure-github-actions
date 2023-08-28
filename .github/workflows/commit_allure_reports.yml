@@ -52,11 +52,10 @@ jobs:
           path: allure-results.zip
 
       - name: Unzip allure-results.zip
-        run: |
-          pwd
-          ls
+        shell: bash
+        command: |
           unzip $PWD/allure-results.zip -d $PWD/allure-results-cpy
-          ls
+          ls -la
 
       - name: Commit Allure Reports
         run: |
