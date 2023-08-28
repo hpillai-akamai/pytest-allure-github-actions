@@ -56,6 +56,7 @@ jobs:
           # unzip $PWD/allure-results.zip -d $PWD/allure-results-cpy
           cd allure-results.zip
           ls -la
+          ${{ runner.temp }}/allure-results.zip -l
 
       - name: Commit Allure Reports
         run: |
