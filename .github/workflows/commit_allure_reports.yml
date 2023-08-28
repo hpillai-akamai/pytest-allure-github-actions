@@ -22,6 +22,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
+          cd ..
           pwd
           ls
           mkdir -p ~/.ssh
