@@ -15,8 +15,8 @@ jobs:
   commit_allure_reports:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      # - name: Checkout Repository
+      #   uses: actions/checkout@v2
       - name: Add private key and pre-commit steps
         if: ${{ github.actor != 'github-actions[bot]' }}
         env:
