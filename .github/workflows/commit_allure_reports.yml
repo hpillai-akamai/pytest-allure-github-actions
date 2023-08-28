@@ -57,6 +57,9 @@ jobs:
           cd allure-results.zip
           ls -la
           ${{ runner.temp }}/allure-results.zip -l
+          unzip allure-results.zip.zip -d allure-artifact
+          pwd
+          ls
 
       - name: Commit Allure Reports
         run: |
