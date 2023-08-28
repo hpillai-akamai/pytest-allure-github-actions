@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: Commit Allure Reports
+      - name: Add private key and pre-commit steps
         if: ${{ github.actor != 'github-actions[bot]' }}
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -37,7 +37,19 @@ jobs:
           unzip allure-2.15.0.zip
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           allure generate allure-results/allure-results-cases -o allure-report-1 
-          
+
+      - name: Import artifacts from test run
+        uses: actions/download-artifact@v2
+        with:
+          name: allure-results-zip
+          path: allure-results.zip
+
+      - name: Unzip allure-results.zip
+        run: |
+          unzip allure-results.zip
+
+      - name: Commit Allure Reports
+        run: |
           cp -r allure-report-1/history/. allure-results/allure-results-cases/history/.
           cp -r allure-report-1/. docs/allure-report-cases/.
           allure generate allure-results/allure-results-calculator -o allure-report-2
@@ -45,6 +57,7 @@ jobs:
           cp -r allure-report-calculator/. docs/allure-report-calculator/.
           # git add allure-report-cases
           # git add allure-report-calculator
+          git pull
           git add allure-results
           git add docs
           git commit -m "Add Allure reports"
