@@ -44,25 +44,26 @@ jobs:
           unzip allure-2.15.0.zip
           export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           allure generate allure-results/allure-results-cases -o allure-report-1 
-          mkdir -p ${{ inputs.data-folder }}
+          # mkdir -p ${{ inputs.data-folder }}
 
       - name: Import artifacts from test run
         uses: actions/download-artifact@v2
-        with:
-          name: allure-results-zip
-          path: ${{ inputs.data-folder }}/allure-results.zip
+        # with:
+        #   name: allure-results-zip
+        #   path: allure-results-cpy
 
       - name: Unzip allure-results.zip
         run: |
           pwd
           ls
           ls -lrth
-          unzip ${{ inputs.data-folder }}/allure-results.zip -d ${{ inputs.data-folder }}/allure-results-cpy
-          ls -lrth
-          unzip ./allure-results.zip -d ./allure-results-cpy
+          # unzip ${{ inputs.data-folder }}/allure-results.zip -d ${{ inputs.data-folder }}/allure-results-cpy
+          # ls -lrth
+          # unzip ./allure-results.zip -d ./allure-results-cpy
 
       - name: Commit Allure Reports
         run: |
+          export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
           cp -r allure-report-1/history/. allure-results/allure-results-cases/history/.
           cp -r allure-report-1/. docs/allure-report-cases/.
           allure generate allure-results/allure-results-calculator -o allure-report-2
