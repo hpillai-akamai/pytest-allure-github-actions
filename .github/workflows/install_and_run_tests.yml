@@ -4,6 +4,9 @@ name: Install Allure and Run Tests
 on:
   workflow_call:
     inputs:
+      data-folder:
+        required: false
+        type: string
       config-path:
         required: false
         type: string
