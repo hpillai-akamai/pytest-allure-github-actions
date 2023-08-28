@@ -36,7 +36,12 @@ jobs:
           allure --version
           pytest test_calculator.py -v -p no:warnings --alluredir=./allure-results/allure-results-calculator
 
-
+      - name: Upload Data as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-reports-zip
+          path: allure-reports.zip
+          
       - name: Commit Allure Reports
         if: ${{ github.actor != 'github-actions[bot]' }}
         env:
