@@ -22,16 +22,16 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          cd ..
+          # cd ..
           pwd
-          ls
+          ls -la
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_ed25519
-          git remote -v
-          git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
+          # git remote -v
+          # git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
           git config --global user.email "hpillai@akamai.com"
           git config --global user.name "hpillai-akamai"
 
