@@ -34,6 +34,7 @@ jobs:
           # git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
           git config --global user.email "hpillai@akamai.com"
           git config --global user.name "hpillai-akamai"
+          git status
 
           sudo apt install allure
           wget https://github.com/allure-framework/allure2/releases/download/2.15.0/allure-2.15.0.zip
@@ -51,7 +52,7 @@ jobs:
         run: |
           pwd
           ls
-          unzip allure-results.zip
+          unzip .allure-results.zip
 
       - name: Commit Allure Reports
         run: |
