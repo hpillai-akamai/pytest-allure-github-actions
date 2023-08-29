@@ -50,6 +50,7 @@ jobs:
       - name: Upload Data as Artifact
         uses: actions/upload-artifact@v2
         with:
+          name: allure-report
           path: 'allure-report'
           
       - name: Commit Allure Reports
@@ -85,7 +86,5 @@ jobs:
       - name: publish to github pages
         uses: actions/deploy-pages@v2
         with:
-          branch: gh-pages
-          folder: allure-report
+          artifact_name: allure-report
           token: ${{ secrets.MY_GITHUB_TOKEN }}
-          clean: true
