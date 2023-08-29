@@ -55,7 +55,8 @@ jobs:
           allure generate allure-results -o allure-report
           
       - name: Upload Data as Artifact
-        uses: actions/upload-artifact@v2
+#        uses: actions/upload-artifact@v2
+        uses: actions/upload-pages-artifact@v1
         with:
           name: allure-report
           path: 'allure-report'
