@@ -24,6 +24,8 @@ jobs:
         # if: ${{ github.actor != 'github-actions[bot]' }}
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          HARISH_EMAIL: ${{ secrets.HARISH_EMAIL }}
+          HARISH_USERNAME: ${{ secrets.HARISH_USERNAME }}
         run: |
           # cd ..
           pwd
@@ -35,8 +37,8 @@ jobs:
           ssh-add ~/.ssh/id_ed25519
           # git remote -v
           # git remote set-url origin git@github.com:hpillai-akamai/pytest-allure-github-actions.git
-          git config --global user.email "hpillai@akamai.com"
-          git config --global user.name "hpillai-akamai"
+          git config --global user.email "$HARISH_EMAIL"
+          git config --global user.name "$HARISH_USERNAME"
           git status
 
           sudo apt install allure
