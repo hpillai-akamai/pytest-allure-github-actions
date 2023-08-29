@@ -1,0 +1,29 @@
+name: Run component tests for calculator and show reports
+
+on: 
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '5 * * * *'
+  push:
+    paths-ignore:
+      - 'allure-results/**'
+      - 'allure-report-**'
+      - 'docs/**'
+
+jobs:
+  Build docker image:
+#    runs-on: ubuntu-latest
+#    steps:
+    uses: ./.github/workflows/docker-build.yml
+    with:
+      tagname: test1
+      dockerfile: Dockerfile
+
+  install_and_run_tests:
+    needs: trigger_component_tests
+    # runs-on: ubuntu-latest
+    # steps:
+    uses: ./.github/workflows/install_and_run_tests.yml
+    secrets: inherit
+
+
