@@ -6,9 +6,11 @@ on:
       tagname:
         description: 'Name of tag'
         required: true
+        type: string
       dockerfile:
         description: 'Path to the Dockerfile'
         required: true
+        type: string
 
 jobs:
   build-docker-image:
