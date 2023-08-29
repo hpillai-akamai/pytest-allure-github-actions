@@ -19,11 +19,5 @@ jobs:
       tagname: test1
       dockerfile: Dockerfile
 
-  install_and_run_tests:
-    needs: trigger_component_tests
-    # runs-on: ubuntu-latest
-    # steps:
-    uses: ./.github/workflows/install_and_run_tests.yml
-    secrets: inherit
 
 
