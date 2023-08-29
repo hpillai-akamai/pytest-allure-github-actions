@@ -35,6 +35,7 @@ jobs:
       - name: Install Allure command-line tool and Run test_calculator.py
         continue-on-error: true
         run: |
+          git pull
           sudo apt install allure
           wget https://github.com/allure-framework/allure2/releases/download/2.15.0/allure-2.15.0.zip
           unzip allure-2.15.0.zip
