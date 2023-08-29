@@ -21,6 +21,6 @@ RUN mkdir -p /home/user_a/output
 
 COPY --chown=user_a:user_a Pipfile* ./
 COPY --chown=user_a:user_a test_calculator.py ./
-COPY --chown=user_a:user_a test_cases.py.py ./
+COPY --chown=user_a:user_a test_cases.py ./
 COPY --chown=user_a:user_a allure-results ./
 COPY --chown=user_a:user_a docs ./
