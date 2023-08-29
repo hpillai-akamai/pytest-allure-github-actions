@@ -16,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish to GitHub Pages test_calculator
-        if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'workflow_run'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
-          publish_dir: ./allure-report-calculator
-          cname: hpillai-akamai.github.io
+#        if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'workflow_run'
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+#          publish_dir: ./allure-report-calculator
+#          cname: hpillai-akamai.github.io

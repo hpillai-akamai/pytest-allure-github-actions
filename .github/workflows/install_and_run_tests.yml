@@ -44,13 +44,13 @@ jobs:
         run: |
           ls allure-2.15.0/bin
           ls allure-results
-          zip -r allure-results.zip allure-results
+          export PATH="$PATH:$(pwd)/allure-2.15.0/bin"
+          allure generate allure-results -o allure-report
           
       - name: Upload Data as Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: allure-results-zip
-          path: allure-results-cpy
+          path: 'allure-report'
           
       - name: Commit Allure Reports
         if: ${{ github.actor != 'github-actions[bot]' }}
@@ -81,3 +81,11 @@ jobs:
           git add docs
           git commit -m "Add Allure reports"
           git push origin main
+
+      - name: publish to github pages
+        uses: actions/deploy-pages@v2
+        with:
+          branch: gh-pages
+          folder: allure-report
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
+          clean: true
