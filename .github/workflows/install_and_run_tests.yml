@@ -84,6 +84,7 @@ jobs:
           allure generate allure-results/allure-results-calculator -o allure-report-2
           cp -r allure-report-2/history/. allure-results/allure-results-calculator/history/.
           cp -r allure-report-2/. docs/allure-report-calculator/.
+          cp -r allure-report/. docs/allure-report/.
           # git add allure-report-cases
           # git add allure-report-calculator
           git add allure-results
