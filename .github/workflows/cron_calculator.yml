@@ -3,12 +3,12 @@ name: Run component tests for calculator and show reports
 on: 
   # workflow_dispatch:
   schedule:
-    - cron: '5 * * * *'
-  # push:
-  #   paths-ignore:
-  #     - 'allure-results/**'
-  #     - 'allure-report-**'
-  #     - 'docs/**'
+    - cron: '*/5 * * * *'
+  push:
+    paths-ignore:
+      - 'allure-results/**'
+      - 'allure-report-**'
+      - 'docs/**'
 
 jobs:
   trigger_component_tests:
