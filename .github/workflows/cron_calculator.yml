@@ -4,11 +4,11 @@ on:
   # workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *'
-  push:
-    paths-ignore:
-      - 'allure-results/**'
-      - 'allure-report-**'
-      - 'docs/**'
+  # push:
+  #   paths-ignore:
+  #     - 'allure-results/**'
+  #     - 'allure-report-**'
+  #     - 'docs/**'
 
 jobs:
   trigger_component_tests:
